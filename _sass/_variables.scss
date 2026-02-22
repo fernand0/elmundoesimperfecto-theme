@@ -1,0 +1,30 @@
+//
+// Shared color variables for all elmundoesimperfecto sites
+// Override these in individual sites by redefining before importing
+//
+
+// Base colors
+$body-bg:               #fff !default;
+$body-color:            #515151 !default;
+$link-color:            #268bd2 !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+
+// Sidebar colors
+$sidebar-bg:            #202020 !default;
+$sidebar-text:          #a0a0a0 !default;
+$sidebar-heading:       #e3e3e3 !default;
+$sidebar-link:          #a0a0a0 !default;
+$sidebar-link-active:   #f0f0f0 !default;
+
+// Masthead colors
+$masthead-bg:           #f4f4f4 !default;
+$masthead-title-color:  #505050 !default;
+$masthead-small-color:  #b0b0b0 !default;
+
+// Theme variants (used by theme-base-0b* classes)
+$theme-0b1-primary:     #268bd2 !default;  // Blue
+$theme-0b2-primary:     #5ba347 !default;  // Green
+$theme-0b3-primary:     #d93e3e !default;  // Red
+$theme-0b4-primary:     #e8a62e !default;  // Orange
+$theme-0b5-primary:     #8e44ad !default;  // Purple
+$theme-0b6-primary:     #1abc9c !default;  // Teal
