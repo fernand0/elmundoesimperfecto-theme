@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/fernand0/elmundoesimperfecto-theme"
   spec.license       = "MIT"
 
-  spec.files         = Dir["**/*"].reject { |f| f.start_with?(".") }
+  spec.files         = Dir["_includes/**/*", "_layouts/**/*", "_sass/**/*", "assets/**/*"]
 
   spec.metadata      = {
     "bug_tracker_uri"   => "https://github.com/fernand0/elmundoesimperfecto-theme/issues",
