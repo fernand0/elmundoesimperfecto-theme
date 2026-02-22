@@ -1,0 +1,818 @@
+html,
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+.navbar {
+  border-radius: 0;
+  border-bottom: 1px solid #eee;
+}
+
+img {
+  max-width: 100%;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+.mt25 {
+  margin-top: 0;
+  @include media-query($on-palm) {
+    margin-top: 25px;
+  }
+}
+
+.p20 {
+  padding: 20px 0;
+}
+.navbar-brand {
+  font-weight: 900;
+  font-size: 1.85em;
+  padding: 10px 0;
+  @media screen and (max-width: $on-palm) {
+    font-size: 1.5em;
+    margin-left: 0;
+  }
+}
+.post-meta {
+  color: $grey-color;
+}
+
+.card {
+  margin-bottom: 2em;
+  border: none;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0px 1px 0px #ccc, 0px 2px 0px #c9c9c9, 0px 3px 0px #bbb,
+      0px 4px 0px #b9b9b9, 0px 6px 0px rgba(0, 0, 0, 0.1),
+      0px 1px 0px rgba(0, 0, 0, 0.3), 0px 3px 0px rgba(0, 0, 0, 0.2),
+      0px 5px 0px rgba(0, 0, 0, 0.25), 0 7px 7px rgba(0, 0, 0, 0.1),
+      0 8px 7px rgba(0, 0, 0, 0.1), 0 9px 9px rgba(0, 0, 0, 0.1),
+      0 10px 10px rgba(0, 0, 0, 0.15), 0 15px 15px rgba(0, 0, 0, 0.16);
+  }
+
+  .image {
+    img {
+      height: 220px;
+      object-fit: cover;
+      object-position: center;
+      @media screen and (max-width: $on-palm) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+footer {
+  border-top: 1px solid $grey-color-light;
+}
+
+.social {
+  list-style: none;
+  display: inline;
+  margin-left: 10px;
+  padding: 5px 8px;
+  font-size: 1.25em;
+}
+.social:hover {
+  opacity: 0.7;
+}
+.social img {
+  width: 20px;
+}
+
+.quora img {
+  width: 17px;
+}
+
+.facebook img {
+  width: 16px;
+}
+
+.recent ul {
+  list-style: none;
+  padding: 0;
+  text-align: justify;
+}
+
+.recent {
+  padding: 10px;
+  border: 1px solid $grey-color-light;
+}
+
+.post-img img {
+  width: 100%;
+}
+
+.post-title {
+  line-height: 2;
+  text-decoration: underline;
+}
+.panel-title {
+  font-size: 1.5em;
+}
+
+.index-anchor {
+  text-decoration: none;
+  color: $text-color;
+  &:hover {
+    text-decoration: none;
+    color: $text-color;
+  }
+}
+
+article.post {
+  margin-bottom: 5em;
+}
+
+.home .flexRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.home .col {
+  padding: 0 15px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .home .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .home .col {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 1rem;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-collapse.show {
+    display: flex;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+@charset "UTF-8";
+
+/*
+
+Adapted from PubwichFork Default Layout
+================================================================================
+
+You can use this stylesheet to create a custom Pubwich theme. You should
+duplicate the ``app/themes/default/`` directory to ``usr/themes/yourtheme/``
+though (at least containing the CSS file), and then change the ``PUBWICH_THEME``
+constant in your configuration file.
+
+@author Michael Haschke <http://michael.haschke.biz>
+
+*/
+
+
+/*
+
+Reset
+--------------------------------------------------------------------------------
+
+@author     Eric Meyer
+@see        http://meyerweb.com/eric/tools/css/reset/
+@version    v2.0 | 20110126
+@license    none (public domain)
+
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+
+Helper
+--------------------------------------------------------------------------------
+
+*/
+
+.clearfix {
+    min-height: contain-floats;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.hideme {
+    position: absolute;
+    left: -5000em;
+}
+
+
+/*
+
+Basic Layout
+--------------------------------------------------------------------------------
+
+*/
+
+html {
+    font-size: 100.01%;
+    font-size: calc(0.75em + 0.25vh + 0.15vw);
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+
+body {
+    background: #ffffff;
+    color: #444;
+    padding: 1.4em;
+}
+
+#header,
+#main,
+#footer {
+    width: auto;
+	max-width: 80rem;
+	margin: 1.4rem auto;
+}
+
+#main {
+  background: #f6f6f6; // o el color que prefieras
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0,0,0,0.04);
+  padding: 1.4rem;
+}
+
+#header {
+}
+
+.header-container {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+#main {
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #004235;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000;
+}
+
+p {
+    margin-bottom: 0.7rem;
+}
+
+p:last-child {
+    margin: 0;
+}
+
+a {
+    text-decoration: underline;
+    color: #004235;
+}
+a:focus,
+a:hover,
+a:active {
+    color: #000;
+    text-decoration: none;
+}
+
+#footer {
+    border-top: dotted 1px #999;
+	padding: 1.4rem 0;
+}
+
+#footer a.pubwich {
+	background: url('./pubwichfork_16.png') no-repeat left center transparent;
+	white-space: nowrap;
+	padding-left: 18px;
+}
+
+@media screen and (min-width: 50rem)
+{
+}
+
+@media screen and (min-width: 75rem)
+{
+}
+
+/*
+
+Container
+--------------------------------------------------------------------------------
+
+*/
+
+/*
+
+[class*="container"] {
+    margin-bottom: 1.4rem;
+}
+
+@media screen and (min-width: 50rem)
+{
+    [class*="container"] {
+        box-sizing: border-box;
+        float: left;
+        clear: none;
+        width: 50%;
+    }
+
+    [class*="container"]:nth-child(2n+1) {
+        clear: left;
+        padding-right: 0.7rem;
+    }
+
+    [class*="container"]:nth-child(2n+2) {
+        clear: none;
+        padding-left: 0.7rem;
+    }
+
+}
+
+@media screen and (min-width: 75rem)
+{
+    [class*="container"] {
+        width: 33.33%;
+    }
+
+    [class*="container"]:nth-child(3n+1) {
+        clear: left;
+        padding-right: 0.9333rem;
+    }
+
+    [class*="container"]:nth-child(3n+2) {
+        clear: none;
+        padding-left: 0.4667rem;
+        padding-right: 0.4667rem;
+    }
+
+    [class*="container"]:nth-child(3n+3) {
+        clear: none;
+        padding-left: 0.9333rem;
+    }
+
+}
+
+*/
+
+
+/*
+
+Boxes default
+--------------------------------------------------------------------------------
+
+*/
+
+.box {
+    margin-bottom: 1.4rem;
+    background: #fff;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    border: solid 1px #ddd;
+}
+
+.boxheader {
+    padding: 0.35rem 0.7rem;
+    background: #f3f3f3;
+    border-bottom: 1px dotted #999;
+}
+
+.boxheader h2 {
+    display: inline;
+}
+
+.boxheader p {
+    display: inline;
+}
+
+.boxcontent {
+	padding: 0.7rem;
+}
+
+.boxcontent > li {
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.7rem;
+    border-bottom: dotted 1px #ddd;
+    overflow: hidden;
+}
+
+.boxcontent > li:last-child {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.item-media-thumbnail {
+    float: left;
+    vertical-align: baseline;
+    margin: 0.35rem 0.7rem 0.35rem 0;
+    width: auto;
+    height: auto;
+    max-height: 7rem;
+    min-width: 4.2rem;
+    max-width: 25%;
+}
+
+.item-media-thumbnail + strong {
+    display: block;
+}
+
+.nodata {
+	opacity: 0.65;
+}
+
+.box.no-title h2 {
+	display: none;
+}
+
+
+/*
+
+Boxes special
+--------------------------------------------------------------------------------
+
+*/
+
+/* use branding colors
+
+@see http://brandcolors.net/?brands=50,58,68,70,72,76,92,93,98,111,121,150,155,168,323
+
+*/
+
+.dribbble h2,
+.dribbble a {
+    color: #8aba56;
+}
+
+.facebookpage h2,
+.facebookpage a {
+    color: #3b5998;
+}
+
+.goodreads h2,
+.goodreads a {
+	color: #553b08;
+}
+.flickr h2,
+.flickr a {
+	color: #0063dc;
+}
+
+.mastodon h2,
+.mastodon a, {
+	color:#8c8dff
+}
+
+.github h2,
+.github a,
+.githubfeed h2,
+.githubfeed a {
+    color: #4183c4;
+}
+
+.imgur h2,
+.imgur a {
+	color: #85bf25;
+}
+
+.blipfm h2,
+.blipfm a {
+	color: #ffa500;
+}
+
+
+.instagram h2,
+.instagram a {
+	color: #3f729b;
+}
+
+.lastfm h2,
+.lastfm a {
+	color: #d51007;
+}
+
+.pinboard h2,
+.pinboard a {
+	color: #0000e6;
+}
+
+.reddit h2,
+.reddit a {
+	color: #5f99cf;
+}
+
+.twitter h2,
+.twitter a {
+	color: #55acee;
+}
+
+.vimeo h2,
+.vimeo a {
+	color: #1ab7ea;
+}
+
+
+.tumblr h2,
+.tumblr a {
+	color: #001935;
+}
+
+.devto h2,
+.devto a {
+	color: #0a0a0a;
+}
+.wordpress h2,
+.wordpress a {
+	color: #21759b;
+}
+.youtube h2,
+.youtube a {
+	color: #cd201f;
+}
+
+/* list item layout
+
+*/
+
+.instagram .boxcontent,
+.flickr .boxcontent,
+.dribbble .boxcontent {
+	padding-right: 0.35rem;
+}
+
+.instagram .boxcontent li,
+.flickr .boxcontent li,
+.dribbble .boxcontent li {
+    padding:0;
+    margin: 0;
+    float: left;
+    width: 25%;
+    border: none;
+}
+
+.instagram .boxcontent li a,
+.flickr .boxcontent li a,
+.dribbble .boxcontent li a {
+    display: block;
+    margin: 0 0.35rem 0.35rem 0;
+    border: none;
+}
+
+.instagram .boxcontent li img,
+.flickr .boxcontent li img,
+.dribbble .boxcontent li img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+body {
+  border-top: none;
+}
+
+.navbar {
+  background-color: #004235;
+  padding: 1rem;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #fff;
+}
+
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+// Pie de página limpio y optimizado
+
+.footer-green {
+  background: #004235;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.footer-contact,
+.footer-author,
+.footer-social {
+  display: block;
+  margin-bottom: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+
+.footer-author {
+  font-size: 1.1rem;
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 0.3rem;
+}
+
+.footer-social i {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.footer-white {
+  background: #fff;
+  color: #444;
+  padding: 0.7rem 0;
+  font-size: 0.95rem;
+  border-top: 1px solid #eee;
+  text-align: left;
+}
+
+.footer-white .copyright {
+  margin-left: 1.4rem;
+  display: block;
+  text-align: left;
+}
+
+.footer-white a {
+  color: #004235;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-green {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer-white {
+    text-align: center;
+  }
+  .footer-white .copyright {
+    margin-left: 0;
+    text-align: center;
+  }
+}

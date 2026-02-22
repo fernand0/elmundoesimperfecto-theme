@@ -1,0 +1,37 @@
+<div class="home">
+  <div class="flexRow">
+    {% for post in site.posts reversed %}
+      <div class="col">
+       <a href="{{ post.url | prepend: site.url }}" class="index-anchor">
+
+        <div class="card rounded overflow-hidden">
+          <div class="image">
+            {% if post.image %}
+            <img src="{{post.image | relative_url}}" alt="{{post.title}}">
+            {% endif %}
+            <div class="card-body">
+
+    {% assign cats = "twitter,mastodon,reddit,github,flickr,goodreads,youtube,wordpress,devto,tumblr,imgur,blipfm" | split: "," %}
+
+    {% for cat in post.categories %}
+    {% if cats contains cat %}
+    	<div class="{{post.categories}}">
+    {% endif %}
+    {% endfor %}
+		    <h2 class="panel-title"><small>{{ post.title | truncate: 25 }}</small></h2>
+
+    {% for cat in post.categories %}
+    {% if cats contains cat %}
+    	</div>
+    {% endif %}
+    {% endfor %}
+		    <p><span class="post-meta"><small>{{ post.date | date: "(%H:%M)" }}</small></span></p>
+	      <p><small>{{ post.excerpt }} </small></p>
+            </div>
+          </div>
+        </div>
+      </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>

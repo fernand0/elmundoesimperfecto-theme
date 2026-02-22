@@ -108,7 +108,36 @@ Create `_layouts/default.html` in your site to override the theme's default layo
 
 Create `_includes/sidebar.html` in your site to customize the sidebar.
 
-## Structure
+## Layouts
+
+The theme provides multiple layouts for different site types:
+
+| Layout | Use Case | Example |
+|--------|----------|---------|
+| `default` | Basic pages | All sites |
+| `blog` | Blog posts with sidebar | blog |
+| `aggregator` | Card grid for social feeds | personalAggregator |
+| `portfolio` | Project showcase | projects |
+| `page` | Static pages | All sites |
+| `post` | Blog posts with related posts | blog |
+
+### Using Layouts
+
+In your site's front matter:
+
+```yaml
+---
+layout: aggregator
+---
+```
+
+Or set a default in `_config.yml`:
+
+```yaml
+defaults:
+  - scope: { path: "" }
+    values: { layout: aggregator }
+```
 
 ```
 elmundoesimperfecto-theme/
