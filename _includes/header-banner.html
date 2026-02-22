@@ -1,7 +1,10 @@
 <!-- Header banner -->
 <div class="header-banner">
   <div class="container">
-    <h2 class="header-subtitle">{{ site.subtitle | default: site.tagline }}</h2>
+    <h1 class="header-title">
+      <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+    </h1>
+    <p class="header-tagline">{{ site.tagline }}</p>
     {% if site.explanation %}
     <p class="header-explanation">{{ site.explanation }}</p>
     {% endif %}

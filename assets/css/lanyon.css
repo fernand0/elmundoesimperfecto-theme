@@ -576,15 +576,31 @@ a.pagination-item:hover {
 .header-banner {
   background: linear-gradient(135deg, #004235 0%, #005c4a 100%);
   color: #fff;
-  padding: 3rem 1.5rem;
+  padding: 4rem 1.5rem;
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.header-banner .header-subtitle {
-  font-size: 1.75rem;
+.header-banner .header-title {
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
   color: #fff;
+}
+
+.header-banner .header-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-banner .header-title a:hover {
+  opacity: 0.9;
+}
+
+.header-banner .header-tagline {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  opacity: 0.95;
 }
 
 .header-banner .header-explanation {
@@ -596,11 +612,15 @@ a.pagination-item:hover {
 
 @media (min-width: 38em) {
   .header-banner {
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
   }
   
-  .header-banner .header-subtitle {
-    font-size: 2rem;
+  .header-banner .header-title {
+    font-size: 3rem;
+  }
+  
+  .header-banner .header-tagline {
+    font-size: 1.5rem;
   }
 }
 
