@@ -1,10 +1,10 @@
 # Jekyll
 _site/
 .jekyll-cache/
-.gem/
-*.gem
 
-# Bundler
+# Ruby Gems
+*.gem
+.gem/
 vendor/
 Gemfile.lock
 
