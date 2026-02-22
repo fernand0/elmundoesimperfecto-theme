@@ -632,10 +632,11 @@ a.pagination-item:hover {
   opacity: 1;
 }
 
-.footer-social .icon {
+.footer-social svg {
   width: 24px;
   height: 24px;
   vertical-align: middle;
+  fill: currentColor;
 }
 
 .footer-copyright {
