@@ -1,0 +1,26 @@
+<!-- Header banner -->
+<div class="header-banner">
+  <div class="container">
+    <h1 class="header-title">
+      <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+    </h1>
+    {% if site.tagline %}
+    <p class="header-tagline">{{ site.tagline }}</p>
+    {% endif %}
+    {% if site.explanation %}
+    <p class="header-explanation">{{ site.explanation }}</p>
+    {% endif %}
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="site-nav">
+  <div class="container">
+    <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
+    {% for page in site.pages %}
+      {% if page.layout == 'page' %}
+    <a class="nav-link" href="{{ page.url | relative_url }}">{{ page.title }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</nav>
